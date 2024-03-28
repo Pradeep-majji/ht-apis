@@ -3,7 +3,7 @@ const router = express.Router();
 const Task = require('../models/Task');
 
 // Create a task
-router.post('/', async (req, res) => {
+router.post('/create', async (req, res) => {
   try {
     const task = await Task.create(req.body);
     res.status(201).json(task);
